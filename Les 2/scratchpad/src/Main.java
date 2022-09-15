@@ -3,41 +3,27 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int getal = 1; // is
-        getal += 1;
-        getal = getal + 1; // hetzelfde als regel erboven
-        getal -= 1;
-        getal /= 1; // getal = getal / 1;
+        //256 128 64 32 16 8 4 2 1
+        //                       0 => 0
+        //                       1 => 1
+        //                     1 0 => 2
+        //                     1 1 => 3
+        // 0    0  0  1  0 0 1 0 1 => 37
+        // 0    1  0  0  1 1 0 1 0 => 154
+        // 0    0  0  0  0 0 0 0 0  => 0
+        // 0    1  0  1  1 1 1 1 1 => 191
 
-        getal = 1 + 1; // optellen
-        getal = 1 - 1; // aftrekken
-        getal = 1 * 2; // keer
-        getal = 2 / 2; // delen
-        getal = 10 % 3; // modulus
+        // 4 => 0100
+        // 1 => 0001
+        // =>   0101 uitkomst van 1 | 4
+        // ^
+        // 5 => 0101
+        // 1 => 0001
+        // =>   0100 => 4
 
-        getal = 10;
-//        getal++; // postfix increment
-//        ++getal; // prefix increment
+//        int getal = 100;
+//        System.out.println(getal);
 
-        System.out.println(getal++);
-        System.out.println(getal++);
-        System.out.println(++getal);
-
-        boolean b = getal > 10; // groter
-        b = getal < 10; // kleiner
-        b = getal >= 10; // groter dan of gelijk aan
-        b = getal <= 10; // kleiner dan of gelijk aan
-        b = getal == 10; // gelijk aan
-        b = getal != 10; // niet gelijk aan
-
-        System.out.println(!b); // boolean flippen
-        b = getal <  10 && getal < 6; // and operator short circuited
-        b = getal <  10 & getal < 6; // and operator
-        b = getal > 12 || getal++ < 10; // or operator short circuited
-        b = getal > 12 | getal < 10; // or operator
-
-        System.out.println(getal);
-        System.out.println(b);
 
 
 
