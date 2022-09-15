@@ -1,16 +1,20 @@
 public class Main {
 
     public static void main(String[] args) {
-        byte aantalUren = 5;
-        byte aantalDagen = 6;
-        short minutenInUur = minutenInUur(aantalUren);
-        short minutenInAantalDagen = (short) (minutenInUur((short)(aantalDagen * 24)));
+//        float f = 5.4; // Compileert niet, default is double
+        float fff = 5.4f;
+        float f = CToF(-40);
+        System.out.println("f: " + f);
+        float c = FToC(f);
+        System.out.println("c: " + c);
 
-
-        System.out.println(minutenInUur);
     }
 
-    static short minutenInUur(short aantalUren) {
-        return (short) (aantalUren * 60);
+    static float FToC(float temp) {
+        return (temp - 32) / 1.8f;
+    }
+
+    static float CToF(float temp) {
+        return temp * 1.8f + 32;
     }
 }
