@@ -3,17 +3,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-//        char a = "a"; // String
-//        char b = 'aa'; // meerdere char mag niet
-        char c = 'a';
-        char cc = 'A';
-        char d = 42; // int literal as char
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Voer een tekenreeks in: ");
+        String invoer = scan.nextLine();
+        invoer = invoer.toUpperCase();
 
-        int f = 'A';
+        String output = "";
+        for (int i = 0; i < invoer.length(); i++) {
+            char temp =  (char) (invoer.charAt(i) + 3);
+            if (temp > 'Z') {
+                temp = (char) (temp - 26);
+            }
+            output += temp;
+        }
 
-        String tekst = "Dit is een tekst";
-        char e = tekst.charAt(0);
-        System.out.println(f);
-
+        System.out.println(output);
     }
 }
