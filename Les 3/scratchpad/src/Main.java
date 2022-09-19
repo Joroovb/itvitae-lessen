@@ -2,29 +2,38 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Persoon p = new Persoon("Joris", 29);
-        Persoon baby = new Persoon("Jan");
+        Persoon p = new Persoon();
+        p.setEmailAdres("joris.vanbreugel@code-cafe.nl");
+        System.out.println(p.getEmailAdres("Hacker"));
     }
 }
 
-class Persoon {
-    String naam;
-    int leeftijd; // default waarde = 0
+class Persoon { // encapsulation
+    private String emailAdres; // private fields
 
-    public Persoon(String naam, int leeftijd) {
-        this(naam);
-        System.out.println("2 argumenten");
-        this.leeftijd = leeftijd;
+    public String getEmailAdres() {
+        return emailAdres;
     }
 
-    public Persoon(String naam) {
-        this();
-        System.out.println("1 argument");
-        this.naam = naam;
+    public void setEmailAdres(String emailAdres) {
+        this.emailAdres = emailAdres;
     }
 
-    public Persoon() {
-
-    }
+    //    public String getEmailAdres(String wachtwoord) { // public methods
+//        if (wachtwoord.equals("wachtwoord")) {
+//            return this.emailAdres;
+//        }
+//        System.out.println("Ongeldig wachtwoord!");
+//        return null;
+//    }
+//
+//    public void setEmailAdres(String emailAdres) {
+//        if (!emailAdres.contains("@")) {
+//            System.out.println("Ongeldig emailadres");
+//            return;
+//        }
+//
+//        this.emailAdres = emailAdres;
+//    }
 }
 
