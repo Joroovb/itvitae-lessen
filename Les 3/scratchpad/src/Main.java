@@ -1,23 +1,24 @@
 public class Main {
-    int voorbeeld = 50;
+
 
     public static void main(String[] args) {
-       new Main().testmethode();
-       Main m = new Main();
-        System.out.println(new Main());
-        System.out.println(new Main());
+        Test t = new Test();
+        t.method1(5);
     }
 
-    void testmethode() {
-//        Main m = new Main();
-        int voorbeeld = 60; // shadowing
+}
+class Test {
+    static int x = 11;
+    static private int y = 33;
 
-        if (voorbeeld < 100) {
-            voorbeeld = 120;
-        }
+    public void method1(int x) {
+        Test t = new Test();
+        this.x = 22;
+        y = 44;
 
-        System.out.println(voorbeeld);
-        System.out.println(this.voorbeeld);
+        System.out.println(Test.x);
+        System.out.println(t.x);
+        System.out.println(t.y);
+        System.out.println(y);
     }
-
 }
