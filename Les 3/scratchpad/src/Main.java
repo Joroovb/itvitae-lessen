@@ -2,57 +2,24 @@ public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println(exponent(3, 3));
-        System.out.println(exponent2(3, 3));
-        System.out.println(exponent3(3, 3));
-        System.out.println(OddEvenTest.isOdd(4));
-        System.out.println(OddEvenTest.isOdd2(4));
-        System.out.println(OddEvenTest.isOdd3(4));
+        max(1, 2.0);
+        max(1.0, 2);
+//        max(1, 2); // Ambigue
     }
 
-    public static int exponent(int base, int exp) {
-        if (exp >= 0) {
-            int result = 1;
-            for (int i = 0; i < exp; i++) {
-                result *= base;
-            }
-            return result;
-        } else {
-            return 0;
-        }
-    }
+   static int max(int i, double b) {
+       System.out.println("Int");
+       return 0;
+   }
 
-    public static int exponent2(int base, int exp) {
-        return (int) Math.pow(base, exp);
-    }
+   static double max(double i, int m) {
+       System.out.println("Double");
+       return 0.0;
+   }
 
-    public static int exponent3(int base, int exp) {
-        if (exp == 0) {
-            return 1;
-        } else if (exp < 0) {
-            return base / exponent3(base, exp + 1);
-        } else {
-            return base * exponent3(base, exp - 1);
-        }
-    }
+   static void max(int i, int m) {
+       System.out.println("Ik print iets");
+   }
+
 }
 
-class OddEvenTest {
-    static boolean isOdd(int invoer) {
-        if (invoer % 2 != 0) {
-            return true;
-        }
-        return false;
-    }
-
-    static boolean isOdd2(int invoer) {
-        return invoer % 2 != 0;
-    }
-
-    static boolean isOdd3(int invoer) {
-        if (((invoer & 1)) == 0) {
-            return false;
-        }
-        return true;
-    }
-}
