@@ -2,38 +2,34 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Persoon p = new Persoon();
-        p.setEmailAdres("joris.vanbreugel@code-cafe.nl");
-        System.out.println(p.getEmailAdres("Hacker"));
+        Persoon p1 = new Persoon("Piet");
+//        Persoon p2 = new Persoon("Jan");
+//        System.out.println("Voor wissel: " + p1.naam + p2.naam);
+//        wissel(p1, p2);
+//        System.out.println("Na wissel: " + p1.naam + p2.naam);
+        System.out.println(p1.naam);
+        resetNaam(p1);
+        System.out.println(p1.naam);
+
+    }
+    public static void wissel(Persoon p1, Persoon p2) {
+        Persoon temp = p1; // Temp verwijst naar p1
+        p1 = p2; // p1 verwijst naar p2
+        p2 = temp; // p2 verwijst naar p1
+        p2.naam = "Joris"; // we passen p2 (p1 in main methode) aan
+    }
+
+    public static void resetNaam(Persoon p) {
+        p.naam = "Joris";
     }
 }
 
 class Persoon { // encapsulation
-    private String emailAdres; // private fields
+    public String naam;
 
-    public String getEmailAdres() {
-        return emailAdres;
+    Persoon(String naam) {
+        this.naam = naam;
     }
 
-    public void setEmailAdres(String emailAdres) {
-        this.emailAdres = emailAdres;
-    }
-
-    //    public String getEmailAdres(String wachtwoord) { // public methods
-//        if (wachtwoord.equals("wachtwoord")) {
-//            return this.emailAdres;
-//        }
-//        System.out.println("Ongeldig wachtwoord!");
-//        return null;
-//    }
-//
-//    public void setEmailAdres(String emailAdres) {
-//        if (!emailAdres.contains("@")) {
-//            System.out.println("Ongeldig emailadres");
-//            return;
-//        }
-//
-//        this.emailAdres = emailAdres;
-//    }
 }
 
