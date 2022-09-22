@@ -1,16 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder("Bon");
-        sb.insert(2, 'r');
-        System.out.println(sb);
 
-        StringBuilder sb1 = new StringBuilder("123");
-        char[] naam = {'J', 'a', 'v', 'a'};
-        sb1.insert(2, naam, 1, 3);
-        System.out.println(sb1);
+        int[] nogeenmanier; // declararen
+        nogeenmanier = new int[5]; // init
 
-        StringBuilder sb2 = new StringBuilder("Joris");
-        sb2.delete(1, 3); // exclusief end index
-        System.out.println(sb2);
+        Persoon[] mensen = new Persoon[4];
+
+        int[] extramanier = new int[5];
+
+        System.out.println(extramanier[0]);
+
+        int[] laatsteManier = new int[]{1, 2, 3, 4};
+
+        int[] getallen = {1, 2, 3, 4, 5, 5}; // declareren en init
+        String[] namen = {"Joris", "Melinoe", "Salem", "Dwarka"};
+
+        System.out.println(namen[1]);
+
+        System.out.println(getallen[5]);
     }
+}
+
+
+class Persoon {
+
 }
