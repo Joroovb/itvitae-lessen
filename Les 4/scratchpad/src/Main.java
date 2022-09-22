@@ -1,27 +1,23 @@
 public class Main {
     public static void main(String[] args) {
+        int[] getallen = {1, 2, 4, 5, 6};
 
-        int[] nogeenmanier; // declararen
-        nogeenmanier = new int[5]; // init
+        for (int index = 0; index < 10; index++) {
+            System.out.println(index);
+        }
 
-        Persoon[] mensen = new Persoon[4];
+        for (int i = 0; i < getallen.length; i++) {
+            System.out.println(getallen[i]);
+            if (getallen[i] == 1 ) {
+                getallen[i] = 15;
+            }
+        }
 
-        int[] extramanier = new int[5];
-
-        System.out.println(extramanier[0]);
-
-        int[] laatsteManier = new int[]{1, 2, 3, 4};
-
-        int[] getallen = {1, 2, 3, 4, 5, 5}; // declareren en init
-        String[] namen = {"Joris", "Melinoe", "Salem", "Dwarka"};
-
-        System.out.println(namen[1]);
-
-        System.out.println(getallen[5]);
+        for (int getal : getallen) {
+            System.out.println(getal);
+            if (getal == 1) {
+                getal = 15;
+            }
+        }
     }
-}
-
-
-class Persoon {
-
 }
