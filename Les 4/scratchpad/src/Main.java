@@ -1,23 +1,38 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int[] getallen = {1, 2, 4, 5, 6};
+       Scanner input = new Scanner(System.in);
+        System.out.print("Voer het aantal items in: ");
 
-        for (int index = 0; index < 10; index++) {
-            System.out.println(index);
+        int NUM_ITEMS = input.nextInt();
+        System.out.print("Voer de waarde van alle items in gescheiden door spaties: ");
+
+        int[] items = new int[NUM_ITEMS];
+
+        for (int i = 0; i < NUM_ITEMS; i++) {
+            items[i] = input.nextInt();
         }
 
-        for (int i = 0; i < getallen.length; i++) {
-            System.out.println(getallen[i]);
-            if (getallen[i] == 1 ) {
-                getallen[i] = 15;
+        System.out.println(Arrays.toString(items));
+
+
+        System.out.print("De waarden zijn [");
+
+
+        for (int i = 0; i < NUM_ITEMS; i++) {
+            System.out.print(items[i]);
+            if (i < NUM_ITEMS -1) {
+                System.out.print(", ");
             }
         }
 
-        for (int getal : getallen) {
-            System.out.println(getal);
-            if (getal == 1) {
-                getal = 15;
-            }
+        System.out.println("]");
+
+        for (int item : items) {
+            System.out.println("*".repeat(item));
         }
+
     }
 }
