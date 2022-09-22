@@ -1,44 +1,32 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<String> namen = new ArrayList<>();
-        String[] namen2 = new String[4];
-        namen.add("Joris");
-        namen.add("Melinoe");
-        namen.add(1,"Salem");
+        Punt a = new Punt(1, 2);
+        Punt b = new Punt(1, 2);
+        System.out.println(a.equals(b));
+    }
+}
 
-        System.out.println(namen);
+class Punt {
+    int x;
+    int y;
 
-        for (String naam : namen) {
-            System.out.println(naam);
-        }
-
-        for (int i = 0; i < namen.size(); i++) {
-            System.out.println(namen.get(i));
-            if (namen.get(i).equals("Salem")) {
-                namen.set(i, "Chili");
-            }
-        }
-        System.out.println(namen);
-        System.out.println(namen.indexOf("Salem"));
-
-        namen.remove(0);
-        System.out.println(namen);
-        namen.remove("Chili");
-        System.out.println(namen);
+    Punt(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
 
 
-        ArrayList<Integer> getallen = new ArrayList<>();
-        getallen.add(1);
-        getallen.add(2);
-        getallen.add(3);
-        System.out.println(getallen);
-
-        getallen.remove(Integer.valueOf(2));
-        System.out.println(getallen);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Punt punt = (Punt) o;
+        return x == punt.x && y == punt.y;
     }
 }
