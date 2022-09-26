@@ -4,40 +4,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        char tekstCijfer = '-';
-        System.out.print("Vul het cijfer in: ");
-        int cijfer = input.nextInt();
-        tekstCijfer = cijferGetal(cijfer);
-        tekstCijfer = cijferGetal2(cijfer);
+       Scanner input = new Scanner(System.in);
+       int getal = input.nextInt();
+        System.out.print("Fibonacci: " + fibonacci2(getal));
 
-        System.out.println("Je hebt gehaald: " + tekstCijfer);
     }
 
-    private static char cijferGetal2(int cijfer) {
-        int[] scores = {25, 45, 50, 60, 80};
-        char[] letters = {'F', 'E', 'D', 'C', 'B'};
-        for (int i = 0; i < scores.length; i++) {
-            if (cijfer < scores[i]) {
-                return letters[i];
-            }
-        }
-        return 'A';
+    private static int fibonacci(int getal) {
+        return getal == 0 ? 0 : ((getal == 1) ? 1 : fibonacci(getal - 1 ) + fibonacci(getal -2));
     }
 
-    private static char cijferGetal(int cijfer) {
-        if (cijfer < 25) {
-            return 'F';
-        } else if (cijfer < 45) {
-            return 'E';
-        } else if (cijfer < 50) {
-            return 'D';
-        } else if (cijfer < 60) {
-            return 'C';
-        } else if (cijfer < 80) {
-            return 'B';
-        } else {
-            return 'A';
-        }
+    private static int fibonacci2(int getal) {
+        return getal < 2 ? getal : fibonacci2(getal - 1) + fibonacci2(getal - 2);
     }
+
+
 }
