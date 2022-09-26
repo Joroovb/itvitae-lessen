@@ -5,18 +5,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String browser = input.nextLine();
+        String browser = input.nextLine().toLowerCase();
 
         switch(browser) {
-            case "Edge":
+            case "edge":
                 System.out.println("Je gebruikt Edge");
                 break;
-            case "Chrome":
-            case "Opera":
-            case "Firefox":
+            case "chrome":
+            case "opera":
+            case "firefox":
                 System.out.println("Je gebruikt een moderne browser");
                 break;
-            case "IE":
+            case "internet explorer":
+            case "ie":
                 System.out.println("Internet Explorer??");
                 break;
             default:
