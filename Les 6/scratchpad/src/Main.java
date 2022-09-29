@@ -12,12 +12,21 @@ public class Main {
 
 }
 
-abstract class Vogel {
+class Vogel {
     int aantalVleugels;
     String snavelVorm;
     String naam;
 
-    abstract void vliegen();
+    public Vogel() {}
+
+    public Vogel(String naam) {
+        System.out.println("Vogel constructor");
+        this.naam = naam;
+    }
+
+    void vliegen() {
+
+    }
 
     @Override
     public String toString() {
@@ -27,10 +36,14 @@ abstract class Vogel {
 
 class Kip extends Vogel {
 
-    public Kip() {
-
+    Kip() {
+      super("Onbekend");
     }
-    
+
+    Kip(String naam) {
+        super(naam);
+    }
+
     void tokken() {
         System.out.println("Tok tok tok");
     }
