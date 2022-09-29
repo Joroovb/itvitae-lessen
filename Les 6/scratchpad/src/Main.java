@@ -1,48 +1,53 @@
+import java.awt.dnd.DragGestureListener;
+
 public class Main {
     public static void main(String[] args) {
-        Kip k = new Kip();
-        Vogel v = new Kip();
-//        Kip kk = new Vogel();
-        Vogel[] vogels = {new Kip(), new Vogel(), new Meeuw()};
-
-        B b = new B();
-        A a = b; // A a = type B
-        System.out.println(a.naam());
-        System.out.println(b.naam());
-    }
-
-}
-
-class A {
-    int a = 3;
-    String naam() {
-        return "a";
+        Koffie k = new Koffie();
+        k.drinken();
+        k.vloeien();
+        Drinkbaar kk = new Koffie();
+        Drinkbaar w = new Water();
+        System.out.println(Drinkbaar.liters);
+        Meeuw m = new Meeuw();
     }
 }
 
-class B extends A {
-
-    int a = 4;
-    String naam() {
-        System.out.println(super.a + a);
-        return super.naam() + "b";
-
-    }
+interface Drinkbaar {
+   int liters = 100;
+   void drinken();
+   default void vloeien() {
+       System.out.println("Ik vloei over de vloer");
+   }
 }
 
-class Vogel {
-    static int aantal = 10;
-    static void getNaam() {
-        System.out.println("Ik ben een vogel");
-    }
-}
-
-class Kip extends Vogel {
-    static void getNaam() {
-        System.out.println("Ik ben een kip");
-    }
+abstract class Vogel {
+    int aantalPootjes;
+    String latijnseNaam;
+    abstract void vliegen();
 }
 
 class Meeuw extends Vogel {
-
+    void vliegen() {
+        
+    }
 }
+
+class Koffie implements Drinkbaar {
+    public void drinken() {
+        System.out.println("Lekker koffie drinken");
+        System.out.println("Je drinkt " + liters + " liter koffie! Lekker aan het werk!");
+    }
+
+    public void vloeien() {
+        System.out.println("Koffie op de vloer");
+    }
+}
+
+class Water implements Drinkbaar {
+    public void drinken() {
+        System.out.println("Lekker water drinken");
+    }
+}
+
+
+
