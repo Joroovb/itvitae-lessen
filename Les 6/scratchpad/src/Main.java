@@ -1,63 +1,48 @@
 public class Main {
     public static void main(String[] args) {
-        Kip kip = new Kip();
-        kip.naam = "Joke";
-        kip.tokken();
-//        Vogel v = new Vogel(); // geen instantie van abstracte klasse
-//        v.vliegen();
-//        System.out.println(v);
-        kip.vliegen();
-        System.out.println(kip);
+        Kip k = new Kip();
+        Vogel v = new Kip();
+//        Kip kk = new Vogel();
+        Vogel[] vogels = {new Kip(), new Vogel(), new Meeuw()};
+
+        B b = new B();
+        A a = b; // A a = type B
+        System.out.println(a.naam());
+        System.out.println(b.naam());
     }
 
 }
 
+class A {
+    int a = 3;
+    String naam() {
+        return "a";
+    }
+}
+
+class B extends A {
+
+    int a = 4;
+    String naam() {
+        System.out.println(super.a + a);
+        return super.naam() + "b";
+
+    }
+}
+
 class Vogel {
-    int aantalVleugels;
-    String snavelVorm;
-    String naam;
-
-    public Vogel() {}
-
-    public Vogel(String naam) {
-        System.out.println("Vogel constructor");
-        this.naam = naam;
-    }
-
-    void vliegen() {
-
-    }
-
-    @Override
-    public String toString() {
-        return "Ik ben een vogel";
+    static int aantal = 10;
+    static void getNaam() {
+        System.out.println("Ik ben een vogel");
     }
 }
 
 class Kip extends Vogel {
-
-    Kip() {
-      super("Onbekend");
+    static void getNaam() {
+        System.out.println("Ik ben een kip");
     }
+}
 
-    Kip(String naam) {
-        super(naam);
-    }
+class Meeuw extends Vogel {
 
-    void tokken() {
-        System.out.println("Tok tok tok");
-    }
-
-    void vliegen() {
-        System.out.println("Ik kan niet vliegen");
-    }
-
-    @Override
-    public String toString() {
-        return "Ik ben een kip";
-    }
-
-    public String toString2() {
-        return "Ik ben een kip2";
-    }
 }
