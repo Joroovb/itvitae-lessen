@@ -1,32 +1,23 @@
 import java.awt.dnd.DragGestureListener;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Meeuw m = new Meeuw();
-        m.vliegen();
-        m.naam = "ja";
-        Vogel v = m;
-//        v.naam = "nee";
-        v.vliegen();
-        Meeuw mm = (Meeuw) v;
-        mm.naam = "Ja";
-        mm.vliegen();
+        ArrayList<Integer> getallen = new ArrayList<>();
+        getallen.add(5);
+        getallen.add(3);
+        getallen.add(1);
+        getallen.add(10);
+        getallen.add(11);
+
+        getallen.forEach(num -> System.out.println(num));
+        getallen.stream().filter(num -> num > 3);
+
+
+        for (Integer n : getallen) {
+            System.out.println(n);
+        }
+
     }
 }
-
-
- class Vogel {
-    void vliegen() {
-        System.out.println("vogels kunnen vliegen");
-    }
-}
-
-class Meeuw extends Vogel {
-    String naam = "";
-    void vliegen() {
-        System.out.println("Meeuwen ook");
-    }
-}
-
-
-
