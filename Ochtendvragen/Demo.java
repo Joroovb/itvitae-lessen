@@ -1,28 +1,13 @@
-class Demo { // SI
+class Demo { // AA
 	public static void main(String... ab) {
-		Kip kap = new Kip();
-	
-		try {
-			kap.herewego();
-		} catch (NoEggsException e) {
-			System.out.println("Gaat fout");
-		} catch (Exception e) {
-			System.out.println("Ik ben een fout");
-		} finally {
-			System.out.println("We gaan door");
-		}
-
-		System.out.println("tok");
+		Q q = new E();
+		L l = new Q();
+		System.out.println("Let's go!");
 	}
 }
 
-class Kip {
-	boolean boos;
+class Q {}
 
-	int herewego() throws NoEggsException {
-		System.out.println("Is de kip boos?" + boos);
-		throw new NoEggsException();
-	}
-}
+class E extends Q implements L {}
 
-class NoEggsException extends Error {}
+interface L {}
