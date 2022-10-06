@@ -1,23 +1,24 @@
-class Demo { // SD
+class Demo { // SE
 	public static void main(String... ab) {
 		Kip kap = new Kip();
 		try {
+			int a = 9;
 			kap.herewego();
 		} catch (Exception e) {
+			a = 7;
 			System.out.println("Gaat fout");
 		}
 
-		System.out.println("tok");
+		System.out.println("tok" + a);
 	}
 }
 
 class Kip {
 	boolean boos;
 
-	int herewego() throws NoEggsException {
+	void herewego() throws NoEggsException {
 		System.out.println("Is de kip boos?" + boos);
 		throw new NoEggsException();
-		return 9;
 	}
 }
 
