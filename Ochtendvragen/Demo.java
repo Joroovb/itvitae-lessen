@@ -4,14 +4,16 @@ class Demo { // AB
 // Links bepaald waar je bij kan
 // Rechts bepaald wat je doet
 		L l = new E();
+		E e = new E();
 		l.i();
-		System.out.println("Let's go!");
 
-		Drinkbaar k = new Koffie();
-		Drinkbaar w = new Water();
-
-		// generiek.    // specifiek
-		Drinkbaar[] d = {new Water(), new Koffie(), new Cola()};
+		// Doosje	// Wat er in moet
+		// Gat		// blokje
+		// Generiek // specifiek
+		Meeuw m = new Meeuw();
+		Dier d = new Meeuw();
+		Dier dd = new Dier();
+		Meeuw mm = new Dier();	
 	}
 }
 
@@ -27,10 +29,6 @@ interface L {
 	void i();
 }
 
-interface Drinkbaar {}
+class Dier {}
 
-class Water implements Drinkbaar {}
-
-class Cola implements Drinkbaar {}
-
-class Koffie implements Drinkbaar {}
+class Meeuw extends Dier {}
