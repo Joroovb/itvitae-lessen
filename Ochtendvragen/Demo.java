@@ -4,7 +4,7 @@ class Demo { // SF
 	
 		try {
 			kap.herewego();
-		} catch (Exception e) {
+		} catch (NoEggsException e) {
 			System.out.println("Gaat fout");
 		} finally {
 			System.out.println("We gaan door");
@@ -19,7 +19,7 @@ class Kip {
 
 	int herewego() throws NoEggsException {
 		System.out.println("Is de kip boos?" + boos);
-		return 12;
+		throw new NoEggsException();
 	}
 }
 
