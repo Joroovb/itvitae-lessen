@@ -1,13 +1,13 @@
-class Demo { // SG
+class Demo { // SI
 	public static void main(String... ab) {
 		Kip kap = new Kip();
 	
 		try {
 			kap.herewego();
-		} catch (Exception e) {
-			System.out.println("Ik ben een fout");
 		} catch (NoEggsException e) {
 			System.out.println("Gaat fout");
+		} catch (Exception e) {
+			System.out.println("Ik ben een fout");
 		} finally {
 			System.out.println("We gaan door");
 		}
@@ -25,4 +25,4 @@ class Kip {
 	}
 }
 
-class NoEggsException extends Exception {}
+class NoEggsException extends Error {}
