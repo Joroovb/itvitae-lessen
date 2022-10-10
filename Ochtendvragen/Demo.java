@@ -1,4 +1,4 @@
-class Demo{   // NG
+class Demo{   // NH
 	public static void main(String... ab){
 		System.out.println("oei!");
 	}
@@ -6,6 +6,6 @@ class Demo{   // NG
 
 class Andere {
 	void hup() {
-		throw new Error();
+		throw new Exception();
 	}
 }
