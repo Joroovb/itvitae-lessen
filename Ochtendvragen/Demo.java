@@ -1,4 +1,4 @@
-class Demo{   // NL
+class Demo{   // NM
 	public static void main(String... ab){
 		System.out.println("oei!");
 		Andere dezelfde = new Andere();
@@ -13,6 +13,6 @@ class Demo{   // NL
 
 class Andere {
 	void hup() throws Exception {
-		throw new RuntimeException();
+		throw new Error();
 	}
 }
