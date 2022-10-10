@@ -1,4 +1,4 @@
-class Demo{   // NC
+class Demo{   // NE
 	public static void main(String... ab){
 		System.out.println("Let's go!");
 		new Demo().beginnen();
@@ -10,15 +10,16 @@ class Demo{   // NC
 		no.a = 15;
 		System.out.println(so.a);
 		no.hoi();
+		System.out.println(so.a);
 	}
 }
 
 class Go {
-	static int a = 5;
+	static int a = 3;
 	
 	void hoi() {
-		int a = 7;
+		int a = 7; // shadowed
 		System.out.println(a);
-		a = a;
+		this.a = a;
 	}
 }
