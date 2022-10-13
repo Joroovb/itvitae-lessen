@@ -1,11 +1,10 @@
-class Demo{   // NT
-	//java Demo a b c d e
+class Demo{   // NU
 	final static public void main(String[] ab) {
-		System.out.println("OK" + ab[3]);
+		System.out.println("OK");
 		oei();
 	}
 
-	void oei(int... daargaanwe) {
+	static void oei(int... daargaanwe) {
 		System.out.println(daargaanwe[daargaanwe.length - 1]);
 	}
 }
