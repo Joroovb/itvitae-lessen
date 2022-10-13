@@ -1,10 +1,11 @@
 class Demo{   // NM
-	public static void main(String... ab){
+	public static void main(String... ab) {
+		// throw new Error();
 		System.out.println("oei!");
 		Andere dezelfde = new Andere();
 		try {
 			dezelfde.hup();
-		} catch (Exception e) {
+		} catch (Throwable e) {
 			System.out.println("Gaat fout!");
 		}
 		System.out.println("Einde");
@@ -12,7 +13,7 @@ class Demo{   // NM
 }
 
 class Andere {
-	void hup() throws Exception {
+	void hup() {
 		throw new Error();
 	}
 }
