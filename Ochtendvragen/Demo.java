@@ -1,7 +1,8 @@
-class Demo{   // NR
+class Demo{   // NS
 	//java Demo a b c d e
-	public static void main(String[] ab) {
-		System.out.println("OK" + ab[ab.length]);
+	final static public int main(String[] ab) {
+		System.out.println("OK" + ab[3]);
+		return 3;
 	}
 }
 
