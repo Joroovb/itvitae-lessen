@@ -1,11 +1,11 @@
-class Demo{   // NU
+class Demo{   // NV
 	final static public void main(String[] ab) {
 		System.out.println("OK");
 		oei();
 	}
 
 	static void oei(int... daargaanwe) {
-		System.out.println(daargaanwe[daargaanwe.length - 1]);
+		System.out.println(daargaanwe.length);
 	}
 }
 
