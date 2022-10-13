@@ -1,4 +1,4 @@
-class Demo{   // NO
+class Demo{   // NP
 	public static void main(String... ab) {
 		System.out.println("oei!");
 		Andere dezelfde = new Andere();
@@ -19,7 +19,8 @@ class Andere implements H {
 	}
 
 	Object gaan() {
-		return new H();
+		H ah = new Andere();
+		return ah;
 	}
 }
 
