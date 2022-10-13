@@ -1,4 +1,4 @@
-class Demo{   // OB
+class Demo{   // OD
 	final static public void main(String[] ab) {
 
 		// Links bepaald waar we bij kunnen
@@ -11,22 +11,23 @@ class Demo{   // OB
 }
 
 class A implements C {
-	public void gaan() {
+	public B gaan() {
 		System.out.println("Gaan in a!");
+		return new B();
 	}
 }
 
 //Override of overload?
 
 class B extends A {
-	public int gaan() {
+	public B gaan() {
 		System.out.println("Gaan in b!");
-		return 7;
+		return null;
 	}
 
 }
 
 interface C {
 	int d = 5;
-	void gaan();
+	B gaan() throws Exception;
 }
