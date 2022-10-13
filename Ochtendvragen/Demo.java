@@ -1,7 +1,11 @@
-class Demo{   // NY
+class Demo{   // OB
 	final static public void main(String[] ab) {
-		A c = new B();
-		c.gaan();
+
+		// Links bepaald waar we bij kunnen
+		// Rechts bepaald wat we doen
+		
+		B c = new B();
+		c.gaan(5);
 		System.out.println("Alles goed gegaan");
 	}
 }
@@ -12,8 +16,10 @@ class A implements C {
 	}
 }
 
+//Override of overload?
+
 class B extends A {
-	public void gaan(int a) {
+	public void gaan() {
 		System.out.println("Gaan in b!");
 	}
 
