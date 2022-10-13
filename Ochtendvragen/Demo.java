@@ -5,7 +5,7 @@ class Demo{   // OB
 		// Rechts bepaald wat we doen
 		
 		B c = new B();
-		c.gaan(5);
+		c.gaan();
 		System.out.println("Alles goed gegaan");
 	}
 }
@@ -19,8 +19,9 @@ class A implements C {
 //Override of overload?
 
 class B extends A {
-	public void gaan() {
+	public int gaan() {
 		System.out.println("Gaan in b!");
+		return 7;
 	}
 
 }
