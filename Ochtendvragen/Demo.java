@@ -1,4 +1,4 @@
-class Demo{   //OJ
+class Demo{   //OK
 	final static public void main(String[] ab) {
 		// We mogen geen instantie maken van
 		// abstracte class
@@ -18,7 +18,9 @@ abstract class HereWeGo {
 }
 
 class Rond extends HereWeGo {
-
+	void gaan() {
+		System.out.println("Ronde wielen aan de bus");
+	}
 }
 
 abstract class Vierkant extends Rond {
