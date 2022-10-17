@@ -1,10 +1,10 @@
-class Demo{   //OM
+class Demo{   //ON
 	final static public void main(String[] ab) {
 		HereWeGo go = new Rechthoek();
 		go.hup();
 		go.gaan();
 		System.out.println(go.a);
-		Rond r = go;
+		Rond r = (Rond) go;
 		r.gaan();
 		r.hup();
 	}
