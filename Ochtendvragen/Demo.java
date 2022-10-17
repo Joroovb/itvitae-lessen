@@ -1,9 +1,13 @@
-class Demo{   //OK
+class Demo{   //OL
 	final static public void main(String[] ab) {
 		// We mogen geen instantie maken van
 		// abstracte class
 		HereWeGo go = new Rechthoek();
 		go.hup();
+		go.gaan();
+
+		Rond r = new Rond();
+		r.gaan();
 	}
 }
 
