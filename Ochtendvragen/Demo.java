@@ -1,5 +1,7 @@
 class Demo{   // OH
 	final static public void main(String[] ab) {
+		// We mogen geen instantie maken van
+		// abstracte class
 		HereWeGo go = new HereWeGo();
 		go.gaan();
 	}
