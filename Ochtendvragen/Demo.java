@@ -1,4 +1,4 @@
-class Demo{   // PH
+class Demo{   // PI
 	final static public void main(String[] ab) { 
 		System.out.println("start");
 		AAA a = new QQQ();
@@ -10,7 +10,7 @@ class Demo{   // PH
 class AAA{
 	void aaa() {
 		System.out.println("in aaa");
-		throw new RuntimeException();
+		throw new Exception();
 	}
 
 }
