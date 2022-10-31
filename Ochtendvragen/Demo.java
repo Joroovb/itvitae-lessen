@@ -1,8 +1,8 @@
-class Demo{   // PG
+class Demo{   // PH
 	final static public void main(String[] ab) { 
 		System.out.println("start");
 		AAA a = new QQQ();
-		RRR b = (RRR)a;
+		AAA b = (QQQ)a;
 		System.out.println("einde");
 	}
 }
@@ -26,6 +26,6 @@ class RRR {
 
 }
 
-interface JJJ{
+interface JJJ {
 
 }
