@@ -1,8 +1,8 @@
-class Demo{   // PE
+class Demo{   // PF
 	final static public void main(String[] ab) { 
 		System.out.println("start");
 		AAA a = new QQQ();
-		QQQ b = (AAA)a;
+		JJJ b = (JJJ)a;
 		System.out.println("einde");
 	}
 }
