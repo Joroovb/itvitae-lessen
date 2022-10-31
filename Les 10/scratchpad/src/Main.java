@@ -2,13 +2,17 @@ public class Main {
     public static void main(String[] args) {
         // Garbage collector
         // Eligible for garbage collection
-        int a = 8;
+
+        VogelKooi kooi = new VogelKooi();
         Vogel V = new Vogel("Pieter de vogel");
         Vogel V2 = new Vogel("Jan de Vogel");
-        V.eten(V2);
-        V.aantalFladderen(a);
-        System.out.println(a);
-        System.out.println(V2.naam);
+        kooi.vogels[0] = V;
+        kooi.vogels[1] = new Vogel(null);
+
+        V = V2;
+        V2 = null;
+        kooi.vogels[0] = null;
+        System.out.println(kooi.vogels[0].naam);
     }
 }
 
@@ -18,17 +22,9 @@ class Vogel {
     Vogel(String naam) {
         this.naam = naam;
     }
+}
 
-    void aantalFladderen(int fladders) {
-        for(int i = 0; i < fladders; ++i){
-            System.out.println("Fladder");
-        }
-        fladders = 9;
-    }
-
-    void eten(Vogel v) {
-        System.out.println("Lekker " + v.naam + " eten");
-        v.naam = "Bob de vogel";
-    }
+class VogelKooi {
+    Vogel[] vogels = new Vogel[2];
 }
 
