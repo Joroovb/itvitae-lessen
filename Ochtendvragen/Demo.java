@@ -1,4 +1,4 @@
-class Demo{   // PI
+class Demo{   // PJ
 	final static public void main(String[] ab) { 
 		System.out.println("start");
 		AAA a = new QQQ();
@@ -7,10 +7,10 @@ class Demo{   // PI
 	}
 }
 
-class AAA{
+class AAA implements JJJ {
 	void aaa() {
 		System.out.println("in aaa");
-		throw new Exception();
+		throw new RuntimeException();
 	}
 
 }
@@ -27,5 +27,5 @@ class RRR {
 }
 
 interface JJJ {
-
+	void aaa() throws Exception;
 }
