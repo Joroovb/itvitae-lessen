@@ -1,42 +1,20 @@
-class Demo{   //ON
-	final static public void main(String[] ab) {
-		HereWeGo go = new Rechthoek();
-		go.hup();
-		go.gaan();
-		System.out.println(go.a);
-		Rond r = (Rond) go;
-		r.gaan();
-		r.hup();
+class Demo{   // PB
+	final static public void main(String[] ab) { 
+		System.out.println("start");
+		AAA a = new QQQ();
+		AAA b = (QQQ)a;
+		System.out.println("einde");
 	}
 }
 
-abstract class HereWeGo {
-	int a = 3;
-	abstract void gaan();
-	static void hup() {
-		System.out.println("We gaan!");
-	}
+class AAA{
+
 }
 
-class Rond extends HereWeGo {
-	int a = 4;
-	void gaan() {
-		System.out.println("Ronde wielen aan de bus");
-	}
+class QQQ extends AAA{
+
 }
 
-abstract class Vierkant extends Rond {
-	int a = 4;
-	abstract void gaan();
-}
+interface JJJ{
 
-class Rechthoek extends Vierkant {
-	int a = 6;
-	void gaan() {
-		System.out.println("We zijn in vierkant");
-	}
-
-	static void hup() {
-		System.out.println("Rechthoek formatie!");
-	}
 }
