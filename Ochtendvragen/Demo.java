@@ -1,8 +1,8 @@
-class Demo{   // PK
+class Demo{   // PL
 	final static public void main(String[] ab) { 
 		System.out.println("start");
 		AAA a = new QQQ();
-		AAA b = (QQQ)a;
+		JJJ b = (QQQ)a;
 		b.aaa();
 	}
 }
