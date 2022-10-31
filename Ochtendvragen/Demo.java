@@ -1,5 +1,5 @@
-class Demo{   // PL
-	final static public void main(String[] ab) { 
+class Demo{   // PM
+	final static public void main(String[] ab) throws Throwable { 
 		System.out.println("start");
 		AAA a = new QQQ();
 		JJJ b = (QQQ)a;
