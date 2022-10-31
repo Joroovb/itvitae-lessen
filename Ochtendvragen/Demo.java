@@ -1,9 +1,9 @@
-class Demo{   // PM
-	final static public void main(String[] ab) throws Throwable { 
+class Demo{   // PS
+	final static public void main(String[] ab) { 
 		System.out.println("start");
 		AAA a = new QQQ();
-		JJJ b = (QQQ)a;
-		b.aaa();
+		QQQ b = (QQQ)a;
+		b.bbb();
 	}
 }
 
@@ -27,7 +27,9 @@ class RRR {
 }
 
 interface JJJ {
-	void aaa() throws Exception;
+	default void bbb() throws Exception {
+		System.out.println("Ik doe het!!!");
+	}
 }
 
 //private
