@@ -1,6 +1,6 @@
 class Demo{   // WCCCC
 	final static public void main(String[] ab){ 
-		System.out.println(0b0001_1110);
+		System.out.println(0b0011_1000);
 	}
 }
 
