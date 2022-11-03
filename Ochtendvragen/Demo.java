@@ -10,8 +10,10 @@ class Demo{   // WCCCC
 // 0 1 2 3 4 5 6 7 8 9 - 10	prefix = null decimal
 // 0 .. 9 A .. F - 16 prefix = 0x0000 hexadecimal
 
-//			8	1
+//	512	64	8	1
 //			1	2 = 10
+//	6   0   3   0
+//  3072  +  24  = 3096
 
 //			2	1
 //			0   1 - 1
