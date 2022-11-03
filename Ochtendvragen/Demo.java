@@ -8,7 +8,7 @@ class Demo{   // QD
 class WWW {
 	void worldWideWebben() {
 		try {
-			new TTT.proberen();
+			new TTT().proberen();
 		} catch (Exception e) {
 			System.out.println("Gevangen!");
 		} finally {
