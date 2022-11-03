@@ -1,6 +1,6 @@
-class Demo{   // WCC
+class Demo{   // WCCC
 	final static public void main(String[] ab){ 
-		System.out.println(0x2C);
+		System.out.println(0b0110);
 	}
 }
 
