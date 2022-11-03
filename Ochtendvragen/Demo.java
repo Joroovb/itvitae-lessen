@@ -1,4 +1,4 @@
-class Demo{   // WE
+class Demo{   // WF
 	final static public void main(String[] ab){ 
 		lopen(new VB().gaan(true));
 		System.out.println("einde");
@@ -21,7 +21,7 @@ class VB {
 
 	float gaan(char w) {
 		System.out.println("Lopen4");
-		return 6.3;
+		return 6.3f;
 	}
 }
 
