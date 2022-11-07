@@ -1,11 +1,11 @@
-class Demo{   //  WW
+class Demo{   //  WZ
 	final static public void main(String[] ab){
 		Fiets fiets = new Fiets();
 		try {
 			fiets.fietsen();			
-		} catch (BelKapotException bk) {
+		} catch (Exception bk) {
 			System.out.println("Bel heel erg kapot");
-		} catch (Exception e) {
+		} catch (BelKapotException e) {
 			System.out.println("bel kapot");
 		} finally {
 			System.out.println("a");
