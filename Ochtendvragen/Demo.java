@@ -1,4 +1,4 @@
-class Demo{   //  XB
+class Demo{   //  XC
 	final static public void main(String[] ab){
 		int a = 34;
 		char b = (char) a;
@@ -9,12 +9,18 @@ class Demo{   //  XB
 		Trial w = q;
 
 		q.a++;
-		
-		System.out.println(w.a);
+
+		System.out.println(w.b);
 		System.out.println("Einde");
 	}
 }
 
 class Trial {
 	int a = 22;
+	static b = abc();
+
+	int abc() {
+		System.out.println("Doet tie het?");
+		return a++
+	}
 }
