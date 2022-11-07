@@ -1,4 +1,4 @@
-class Demo{   //  WU
+class Demo{   //  WW
 	final static public void main(String[] ab){
 		Fiets fiets = new Fiets();
 		try {
@@ -24,9 +24,9 @@ class Fiets {
 }
 
 class Bel {
-	void bellen() throws Exception{
+	void bellen() throws BelKapotException{
 		System.out.println("Ik ben aan het bellen");
-		throw new Exception();
+		throw new BelKapotException();
 	}
 }
 
