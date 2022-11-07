@@ -1,8 +1,8 @@
-class Demo{   //  WI
+class Demo{   //  WK
 	final static public void main(String[] ab){
-		VB vb = new VB();
+		WWB vb = new VB();
 		vb.gaan(false);
-		System.out.println(vb.a)
+		System.out.println(vb.a);
 		System.out.println("einde");
 	}
 	static void lopen(double v){
