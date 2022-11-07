@@ -17,7 +17,7 @@ class Demo{   //  XC
 
 class Trial {
 	int a = 22;
-	static b = abc();
+	static int b = abc();
 
 	int abc() {
 		System.out.println("Doet tie het?");
