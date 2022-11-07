@@ -1,4 +1,4 @@
-class Demo{   //  XD
+class Demo{   //  XE
 	final static public void main(String[] ab){
 		int a = 34;
 		char b = (char) a;
@@ -11,12 +11,13 @@ class Demo{   //  XD
 		q.a++;
 
 		System.out.println(w.b);
+		System.out.println(w.a);
 		System.out.println("Einde");
 	}
 }
 
 class Trial {
-	int a = 22;
+	static int a = 22;
 	static int b = abc();
 
 	static int abc() {
