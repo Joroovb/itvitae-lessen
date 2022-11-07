@@ -1,29 +1,33 @@
-class Demo{   //  WT
+class Demo{   //  WU
 	final static public void main(String[] ab){
 		Fiets fiets = new Fiets();
 		try {
 			fiets.fietsen();			
+		} catch (BelKapotException bk) {
+			System.out.println("Bel heel erg kapot");
 		} catch (Exception e) {
-			System.out.print("bel kapot");
+			System.out.println("bel kapot");
 		} finally {
-			System.out.print("a");
+			System.out.println("a");
 		}
-		System.out.print("b");
+		System.out.println("b");
 	}
 }
 
 class Fiets {
 	Bel bel = new Bel();
 
-	void fietsen() throws Exception {
+	void fietsen() throws BelKapotException {
 		bel.bellen();
-		System.out.print("Ik fiets!");
+		System.out.println("Ik fiets!");
 	}
 }
 
 class Bel {
 	void bellen() throws Exception{
-		System.out.print("Ik ben aan het bellen");
+		System.out.println("Ik ben aan het bellen");
 		throw new Exception();
 	}
 }
+
+class BelKapotException extends Exception {}
