@@ -1,5 +1,7 @@
-class Demo{   //  WK
+class Demo{   //  WM
 	final static public void main(String[] ab){
+		// Links bepaald waar je bij kunt
+		// Rechts bepaald wat je kunt
 		WWB vb = new VB();
 		vb.gaan(false);
 		System.out.println(vb.a);
@@ -13,6 +15,7 @@ class Demo{   //  WK
 	}
 }
 class WWB {
+	int a = gaan(true);
 	int gaan(boolean g) {
 		return 24;
 	}
