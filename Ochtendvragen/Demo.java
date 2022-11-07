@@ -1,4 +1,4 @@
-class Demo{   //  XC
+class Demo{   //  XD
 	final static public void main(String[] ab){
 		int a = 34;
 		char b = (char) a;
@@ -19,7 +19,7 @@ class Trial {
 	int a = 22;
 	static int b = abc();
 
-	int abc() {
+	static int abc() {
 		System.out.println("Doet tie het?");
 		return a++;
 	}
