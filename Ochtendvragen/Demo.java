@@ -21,6 +21,6 @@ class Trial {
 
 	int abc() {
 		System.out.println("Doet tie het?");
-		return a++
+		return a++;
 	}
 }
