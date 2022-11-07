@@ -1,12 +1,19 @@
-class Demo{   //  WO
+class Demo{   //  WS
 	final static public void main(String[] ab){
 		Fiets fiets = new Fiets();
-		fiets.fietsen();
+		try {
+		fiets.fietsen();			
+		} catch (Exception e) {
+			System.out.print("bel kapot");
+		} finally {
+			System.out.print("a");
+		}
+		System.out.print("b");
 	}
 }
 
 class Fiets {
-	Bel bel;
+	Bel bel = new Bel();
 
 	void fietsen() {
 		bel.bellen();
@@ -15,8 +22,8 @@ class Fiets {
 }
 
 class Bel {
-	void bellen() {
+	void bellen() throws Exception{
 		System.out.print("Ik ben aan het bellen");
-		throw new RuntimeException();
+		throw new Exception();
 	}
 }
